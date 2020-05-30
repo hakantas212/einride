@@ -1,21 +1,27 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Hero from "../components/main/hero"
+import TitleBox from "../components/main/title-box"
+import GridSection from "../components/main/grid-section"
+import CtaSection from "../components/main/cta-section"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout>
+      <Hero />
+      <TitleBox
+        title="Be part of the change"
+        subtitle="Forget the status quo, sustainable transport is now achievable and cost-competitive. Einride gives you the logistics of tomorrow, today. Don’t wait for your business to be disrupted by change – pioneer the change."
+      />
+
+      <GridSection></GridSection>
+      <TitleBox
+        title="The Einride Service"
+        subtitle="Plan, order and track your sustainable transport. You can drive the transition to sustainable transport and gain a competitive edge with our high-performance transport service."
+      />
+      <CtaSection />
+    </Layout>
+  )
+}
 
 export default IndexPage
